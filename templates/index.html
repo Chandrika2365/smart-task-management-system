@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Task Manager</title>
+</head>
+<body>
+
+    <h1>Smart Task Management System</h1>
+    <h2>Analytics</h2>
+
+<p>Total Tasks: {{ total_tasks }}</p>
+
+<p>Completed Tasks: {{ completed_tasks }}</p>
+
+<p>Pending Tasks: {{ pending_tasks }}</p>
+
+<p>Completion Percentage: {{ completion_percentage }}%</p>
+
+    <form method="POST">
+
+        <input type="text" name="title" placeholder="Task Title" required>
+        <br><br>
+
+        <input type="text" name="description" placeholder="Description" required>
+        <br><br>
+
+        <input type="text" name="priority" placeholder="Priority" required>
+        <br><br>
+
+        <input type="text" name="status" placeholder="Status" required>
+        <br><br>
+
+        <button type="submit">Add Task</button>
+
+    </form>
+
+    <hr>
+
+    <h2>All Tasks</h2>
+
+    {% for task in tasks %}
+
+        <p>
+            <b>Title:</b> {{ task.title }} <br>
+
+            <b>Description:</b> {{ task.description }} <br>
+
+            <b>Priority:</b> {{ task.priority }} <br>
+
+            <b>Status:</b> {{ task.status }}
+            <br><br>
+
+<a href="/delete/{{ task.id }}">
+<a href="/update/{{ task.id }}">
+    Update
+</a>
+
+<br><br>
+    Delete
+</a>
+        </p>
+
+        <hr>
+
+    {% endfor %}
+
+</body>
+</html>
