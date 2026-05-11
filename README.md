@@ -4,11 +4,8 @@
 - Add Tasks
 - Update Tasks
 - Delete Tasks
-- Task Analytics
+- Analytics Dashboard
 - Completion Percentage
-- Flask Backend
-- SQLite Database
-- HTML/CSS Frontend
 
 ## Technologies Used
 - Python
@@ -19,7 +16,29 @@
 - HTML
 - CSS
 
-## Run Project
+## Setup Steps
+
+### Install Packages
+
+```bash
+pip install flask flask_sqlalchemy pandas numpy
+```
+
+### Run Project
 
 ```bash
 python app.py
+```
+
+### Open Browser
+
+```text
+http://127.0.0.1:5000
+```
+
+## Project Structure
+
+- app.py
+- templates/
+- static/
+- taskdb.db
