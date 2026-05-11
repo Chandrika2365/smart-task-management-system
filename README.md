@@ -42,3 +42,7 @@ http://127.0.0.1:5000
 - templates/
 - static/
 - taskdb.db
+
+## Demo Video
+
+https://drive.google.com/file/d/1L8-5dydjUAnqClLsaxfVRg6wy1_Fu_lS/view?usp=drive_link
